@@ -125,37 +125,63 @@
                 <!-- slider -->
                 <div class="slider">
 
-                    <figure class="slider-item active">
-                        <figcaption>
-                            <div class="slider-title">Дрели</div>
-                            <p>Соседям на радость!</p>
-                        </figcaption>
-                        <img src="img/slider-1.jpg" width="620" height="266" alt="">
-                    </figure>
+                    <div class="slider-container">
 
-                    <figure class="slider-item">
-                        <figcaption>
-                            <div class="slider-title">Перфораторы</div>
-                            <p>Настроящие мужские игрушки</p>
-                        </figcaption>
-                        <img src="img/slider-2.jpg" width="620" height="266" alt="">
-                    </figure>
+                        <figure class="slider-item active">
+                            <figcaption>
+                                <div class="slider-title">Дрели</div>
+                                <p>Соседям на радость!</p>
+                            </figcaption>
+                            <img src="img/slider-1.jpg" width="620" height="266" alt="">
+                        </figure>
+                        
+                        <figure class="slider-item">
+                            <figcaption>
+                                <div class="slider-title">Перфораторы</div>
+                                <p>Настроящие мужские игрушки</p>
+                            </figcaption>
+                            <img src="img/slider-2.jpg" width="620" height="266" alt="">
+                        </figure>
 
-                    <div class="slider-prev">
-                        <span class="icon-left"></span>
+                        <figure class="slider-item">
+                            <figcaption>
+                                <div class="slider-title">Дрели</div>
+                                <p>Соседям на радость!</p>
+                            </figcaption>
+                            <img src="img/slider-1.jpg" width="620" height="266" alt="">
+                        </figure>
+
+                        <figure class="slider-item">
+                            <figcaption>
+                                <div class="slider-title">Перфораторы</div>
+                                <p>Настроящие мужские игрушки</p>
+                            </figcaption>
+                            <img src="img/slider-2.jpg" width="620" height="266" alt="">
+                        </figure>
+
                     </div>
-
-                    <div class="slider-next">
-                        <span class="icon-right"></span>
-                    </div>
-
-                    <a class="btn" href="#">открыть каталог</a>
-                    
+          
                     <div class="slider-nav">
 
-                        <i class="slider-dot active"></i>
-                        <i class="slider-dot"></i>
-                        
+                      <div class="slider-control-btn slider-prev">
+                          <span class="icon-left"></span>
+                      </div>
+                      
+                      <div class="slider-control-btn slider-next">
+                          <span class="icon-right"></span>
+                      </div>
+                      
+                      <a class="btn" href="#">открыть каталог</a>
+                      
+                      <div class="slider-nav-dots">
+                      
+                          <i class="slider-dot active"></i>
+                          <i class="slider-dot"></i>
+                          <i class="slider-dot"></i>
+                          <i class="slider-dot"></i>
+                          
+                      </div>
+
                     </div>
 
                 </div> <!-- END slider -->
@@ -287,9 +313,9 @@
                 <div class="service-columns clearfix">
 
                     <ul class="service-menu">
-                        <li class="active">Доставка</li>
-                        <li>Гарантия</li>
-                        <li>Кредит</li>
+                        <li class="active" data-class="service-delivery">Доставка</li>
+                        <li data-class="service-guarantee">Гарантия</li>
+                        <li data-class="service-credit">Кредит</li>
                     </ul>
 
                     <div class="service-column service-delivery active">                              
@@ -475,8 +501,9 @@
 
     </div> <!-- END popup -->
 
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-  <script src="js/js.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 </html>

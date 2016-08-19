@@ -81,6 +81,8 @@
 .icon-search:before { content: '🔍'; } /* '\1f50d' */
 .icon-bookmark:before { content: '🔖'; } /* '\1f516' */
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GENERAL RULES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 body {
   min-width: 960px;
 
@@ -132,8 +134,7 @@ a {
   background: #ee3643;
   border: none;
   border-radius: 3px;
-  -webkit-transition: all .2s ease-in;
-          transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .btn:hover {
@@ -197,7 +198,6 @@ a {
 
   background: #ee3643;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
@@ -294,13 +294,11 @@ a {
 }
 
 .popup-close::before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg); 
+  -webkit-transform: rotate(45deg); 
           transform: rotate(45deg);
 }
 .popup-close::after {
   -webkit-transform: rotate(315deg);  
-      -ms-transform: rotate(315deg);  
           transform: rotate(315deg);
 }
 
@@ -441,8 +439,7 @@ body .logo {
 
   background: #ee3643;
   box-shadow: 0 5px 0 0 #b52933;
-  -webkit-transition: all .3s ease-in;
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .header-main .logo {
@@ -473,8 +470,7 @@ a.logo:active {
 }
 
 .search-btn span {
-  -webkit-transition: all .2s ease-in;
-          transition: all .2s ease-in;
+  transition: opacity .2s ease-in;
 }
 
 .search:hover span {
@@ -545,9 +541,7 @@ a.logo:active {
 .header-counter span {
   padding-right: 8px;
 
-  -webkit-transition: all .3s ease-in;
-
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .header-counter:hover span {
@@ -583,8 +577,7 @@ a.logo:active {
   padding: 12px 0;
 
   background: #63a63e;
-  -webkit-transition: all .3s ease-in;
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .btn-basket:hover {
@@ -658,9 +651,7 @@ a.logo:active {
 .user-block span {
   color: #c5c5c5;
 
-  -webkit-transition: all .3s ease-in;
-
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .btn-auth {
@@ -672,8 +663,7 @@ a.logo:active {
   vertical-align: middle;
 
   background: #fff;
-  -webkit-transition: all .3s ease-in;
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .btn-auth:hover {
@@ -809,9 +799,7 @@ a.logo:active {
   display: block;
   padding: 19px 30px;
 
-  -webkit-transition: all .3s ease-in;
-
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .main-menu-item a:hover {
@@ -930,23 +918,33 @@ main {
   position: relative;
 
   float: left;
-
-  color: #fff;
+  width: 620px;
   height: 266px;
+
+  color: #fff; 
 
   background: #bfbfbf;
   overflow: hidden;
 }
 
-.slider-item {
-  display: none;
-  margin: 0;
+.slider-container {
+  position: relative;
+  left: 0;
+
+  width: 5000px;
+
+  font-size: 0;
+
+  transition: all .3s;
 }
 
-.slider-item.active {
-  display: block;
-  -webkit-animation: slide .3s;
-          animation: slide .3s;
+.slider-item {
+  position: relative;
+
+  display: inline-block;
+  margin: 0;
+
+  vertical-align: top;
 }
 
 .slider-item figcaption {
@@ -1001,7 +999,7 @@ main {
   right: 0;
 }
 
-.slider-nav {
+.slider-nav-dots {
   position: absolute;
   left: 50%;
   bottom: 42px;
@@ -1030,35 +1028,6 @@ main {
 .slider-dot.active {
   background: #ee3643;
   box-shadow: inset 0 0 0 2px #fff;
-}
-
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes slide-prev {
-  100% {
-    -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
-  }
 }
 
     /* ~~~~~~~~~~~~~~~~~~~~  Popular ~~~~~~~~~~~~~~~~~~ */
@@ -1115,8 +1084,7 @@ main {
 
   opacity: 0;
   height: 162px;
-  -webkit-transition: all .3s ease-in;
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .goods-item:hover .goods-item_hover{
@@ -1152,6 +1120,7 @@ main {
   left: 12px;
 
   opacity: .3;
+  transition: all .3s ease-in;
 }
 
 .btn-buy:hover {
@@ -1266,8 +1235,7 @@ main {
   margin-bottom: 20px;
 
   vertical-align: top;
-  -webkit-transition: all .2s ease-in;
-          transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .brands-item:nth-of-type(4n) {
@@ -1342,8 +1310,8 @@ main {
 
 .service-menu li {
   box-sizing: border-box;
-  border-top: 1px solid #405069;
-  border-bottom: 1px solid #293449;
+  /*border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;*/
   min-height: 60px;
   padding-left: 23px;
 
@@ -1353,9 +1321,11 @@ main {
   line-height: 60px;
 
   background: #32425c;
+  box-shadow:
+    inset 0 1px 0 0 #405069,
+    inset 0 -1px 0 0 #293449;
   cursor: pointer;
-  -webkit-transition: all .3s ease-in;
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
   overflow: hidden;
 }
 
@@ -1364,11 +1334,10 @@ main {
 }
 
 .service-menu .active {
-  border: none;
-
   color: #32425c;
 
   background: #fff;
+  box-shadow: none;
   cursor: default;
 }
 
@@ -1665,8 +1634,7 @@ main {
   background: #212a3a;
   border-radius: 50%;
   vertical-align: top;
-  -webkit-transition: all .3s ease-in;
-          transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .social-btn span {
@@ -1822,12 +1790,15 @@ main {
 .range-controls .scale{
   margin-top: 29px;
   height: 2px;
+
   background: #d7dcde;
 }
 
 .range-controls .bar{
   height: 2px;
+
   background: #00ca74;
+  z-index: 10;
 }
 
 .range-controls .toggle{
@@ -1842,6 +1813,7 @@ main {
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
+  z-index: 1000;
 }
 
 .range-controls .max-toggle {
